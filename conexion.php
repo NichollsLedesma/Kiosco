@@ -1,7 +1,5 @@
 <?php
 
-
-
 function conectar(){
 	$usuario = 'root';
 	$pass = '';
