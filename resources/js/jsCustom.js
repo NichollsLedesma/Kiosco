@@ -1,13 +1,14 @@
 var productos = {};
 var categorias = {};
+var pathBase = './resources/php/';
 $(function(){
 	$('#btnLimpiarBusqueda').attr("disabled", true);
-	$.get("./functionsGet.php?command=listadoProd", function(data){
+	$.get(pathBase+"functionsGet.php?command=listadoProd", function(data){
 	}).done(function(data){
 		productos = JSON.parse(data);
 		armarTabla(productos);
 	});
-	$.get("./functionsGet.php?command=listadoCategoria", function(data){
+	$.get(pathBase+"functionsGet.php?command=listadoCategoria", function(data){
 	}).done(function(data){
 		categorias = JSON.parse(data);
 		cargarCombos(categorias);
